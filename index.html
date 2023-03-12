@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/d4cbcb96c8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="snake.css">
+    <title>snake</title>
+</head>
+<body>
+    <h1>snake</h1>
+
+    <button class="btn btn-dark btn-circle" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">Procrastinators press here!</button>
+<!-- OFFCANVAS START------------------------------------------------------------------------>
+    <div class="offcanvas offcanvas-start text-bg-dark"  style="align-items:center" data-bs-scroll="true" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDark">Feel free to game as long you can...</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvasDark-body offCanvasSnake">
+        <p>Have some fun once in a while..</p>
+            <div class="container">
+                <div class="row">
+                    <!-- <canvas id="board"></canvas>  
+                    <button type="submit" class="btn  btn-dark" id="upBtn">&#8593;</button>
+                    <button type="submit" class="btn btn-dark" id="downBtn">&#8595;</button>
+                    <button type="submit" class="btn  btn-dark" id="leftBtn">&#8592;</button>
+                    <button type="submit" class="btn  btn-dark" id="rightBtn">&#8594;</button> --> 
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- OFFCANVAS END------------------------------------------------------------------------>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm " style="text-align:justify">
+                Snake - The GameeThis little program is a javascript vanilla basic code that sets variables for all elements (snake, food, area, growth of snake, game fail conditions). Check the button above to call the hidden procrastination feature...entertain yourself to the max. And when the boss is watching, just click your mouse and the game disappears...  </div>
+            <div class="col-sm ">
+                <canvas id="board" style="width:100%; align-item:center"></canvas></div>
+            <div class="col-sm ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-12   pt-3  px-3">
+                            <i type="submit"    class="fa-solid fa-circle-arrow-up fa-4x" id="upBtn"></i>
+                        </div>
+                            <!-- <button type="submit" class="btn btn1-circle btn-dark" id="upBtn">&#8593;</button></div> -->
+                        <div class="col-sm-12 col-lg-12  pt-3 px-3">
+                            <i type="submit"    class="fa-solid fa-circle-arrow-left fa-4x" id="leftBtn"></i>
+                            <!-- <button type="submit" class="btn btn1-circle btn-dark" id="leftBtn">&#8592;</button> -->
+                            <i type="submit"    class="fa-solid fa-circle-arrow-right fa-4x" id="rightBtn"></i>
+                            <!-- <button type="submit" class="btn btn1-circle btn-dark" id="rightBtn">&#8594;</button> -->
+                        </div>
+                        <div class="col-sm-12 col-lg-12  pt-3 px-3">
+                            <i type="submit"    class="fa-solid fa-circle-arrow-down fa-4x" id="downBtn"></i>
+                            <!-- <button type="submit" class="btn btn1-circle btn-dark" id="downBtn">&#8595;</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <script src="/js/classes/game.js"></script>
+    <script src="/js/classes/board.js"></script>
+    <script src="/js/classes/food.js"></script>
+    <script src="/js/classes/snake.js"></script>
+    <script src="/js/classes/direction.js"></script>
+    <script src="/js/snake-oop-heavily-commented.js"></script>
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
