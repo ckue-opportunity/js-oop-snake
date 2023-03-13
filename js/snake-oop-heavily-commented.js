@@ -8,6 +8,8 @@ var cols = 20; */
 
 // food
 var food;
+// var foodX;
+// var foodY;
 
 // snake
 var snake;
@@ -22,9 +24,6 @@ var direction;
 var velocityY = 0; */
 
 // var snakeBody = []
-
-// var foodX;
-// var foodY;
 
 var gameOver = false;
 

@@ -1,8 +1,11 @@
 class Direction {
     constructor() {
+        this.x;
+        this.y;
+
         this.initialize();
     }
-    
+
     initialize() {
         this.x = 0;
         this.y = 0;
@@ -14,7 +17,7 @@ class Direction {
      * This method prohibits the snake from changing into the 
      * exact opposite direction.
      * 
-     * @param {Object} code 
+     * @param {Object} event 
      */
     change(event) {
         switch (event.code) {

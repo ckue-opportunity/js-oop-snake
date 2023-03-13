@@ -1,6 +1,14 @@
 class Snake {
+    /**
+     * Constructor.
+     * 
+     * @param {Board} board 
+     */
     constructor(board) {
         this.board = board;
+        this.x;
+        this.y;
+
         this.initialize();
     }
 
@@ -16,17 +24,6 @@ class Snake {
     }
 
     /**
-     * Moves the head of the snake.
-     * 
-     * @param {int} velocityX 
-     * @param {int} velocityY 
-     */
-    moveHead(direction) {
-        this.x += direction.x * this.board.blockSize;
-        this.y += direction.y * this.board.blockSize;
-    }
-
-    /**
      * Draws the snake's body.
      */
     draw() {
@@ -36,7 +33,7 @@ class Snake {
         // draw the moved head first and then the rest of the snake's body
         this.drawSquare(this.x, this.y);
 
-        for (let i = 0; i < this.body.length; i++) {
+        for (let i = 0; i < this.body.length; i++) { // sample body = [[3, 5], [4, 5]]
             this.drawSquare(this.body[i][0], this.body[i][1]);
         }
     }
@@ -119,12 +116,25 @@ class Snake {
     }
 
     /**
+     * Moves the head of the snake.
+     * 
+     * @param {Direction} direction 
+     */
+    moveHead(direction) {
+        this.x += direction.x * this.board.blockSize;
+        this.y += direction.y * this.board.blockSize;
+    }
+
+    /**
      * Checks if the head of the snake has left the board.
      * 
      * @returns {Boolean}
      */
     leaveBoard() {
-        if (this.x < 0 || this.x > this.board.cols * this.board.blockSize || this.y < 0 || this.y > this.board.rows * this.board.blockSize) return true;
+        if (this.x < 0 || this.x + 1 > this.board.cols * this.board.blockSize || 
+            this.y < 0 || this.y + 1 > this.board.rows * this.board.blockSize) {
+                return true;
+            }
         else return false;
     }
 }
