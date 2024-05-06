@@ -12,5 +12,6 @@ There are refactoring phase files as follows in this project:
 3. Refactored and tidied (Chris): js/snake-oop.js
 4. Refactored (Chris), using the Game controller class: js/snake-oop-game.js
 5.
+6.
 
 
